@@ -32,3 +32,8 @@ class Header extends Component {
 	}
 }
 ```
+
+**Rules of State**
+* Definition of state: a plain js object used to record and respond to user-trigged events;
+* When we need to update what a component shows, call `this.setState`;
+* Only change state with *setState*
