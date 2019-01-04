@@ -1,15 +1,19 @@
 // Import library
 import React from 'react';
 import ReactNative from 'react-native';
-import { AppRegistry } from 'react-native';
+import { AppRegistry, View } from 'react-native';
 import Header from './src/components/header';
+import AlbumList from '.src/components/AlbumList';
 
 // Create a component
 const App = () => (
-	<Header headerText={'Albums'} />
+	<View>
+		<Header headerText={'Albums'} />
+		<AlbumList />
+	</View>
 );
 
 // Render
 ReactNative.AppRegistry.registerComponent('albums', () => App);
 
-// Note: only the root component uses 'AppRegistry'
+// Notes: only the root component uses 'AppRegistry'
