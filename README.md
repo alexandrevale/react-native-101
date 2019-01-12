@@ -1,7 +1,10 @@
-# react-native-101
+# React Native 101
+
 Repositório dedicado aos estudos de React Native.
+
 Lista de apps:
 * Albums
+* Auth
 * InstaluraMobile
 
 
@@ -10,6 +13,7 @@ Lista de apps:
 API: http://rallycoding.herokuapp.com/api/music_albums
 
 ### Anotações:
+
 **Functional Component**
 * Used for presenting static data
 * Can't handle fetching data
@@ -37,3 +41,20 @@ class Header extends Component {
 * Definition of state: a plain js object used to record and respond to user-trigged events;
 * When we need to update what a component shows, call `this.setState`;
 * Only change state with *setState*
+
+## Auth
+
+Projeto com objetivo de testar a integração com Firebase para autenticar o usuário via formulário de Login.
+
+## Tech Stack
+
+Projeto com objetivo de estudar Redux.
+
+Tool: https://stephengrider.github.io/JSPlaygrounds/
+
+Redux:
+* Action: an object that tells the reducer how to change irs data;
+* Store: an object that holds the application's data
+	* Reducer: a function that returns some data
+	* State: data for our app to use
+
