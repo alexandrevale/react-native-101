@@ -1,5 +1,5 @@
-import { combineReducers } from 'redux';
+import data from './LibraryList.json';
 
-export default combineReducers({
-	libraries: () => []
-});
+export default () => [
+	
+];
