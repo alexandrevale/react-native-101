@@ -6,7 +6,6 @@ import ListItem from './ListItem';
 class LibraryList extends Component {
 	renderItem(libray) {
 		return <ListItem libray={libray} />;
-
 	}
 
 	render() {
