@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import firebase from 'firebase';
 import reducers from './reducers';
-
+import LoginForm from './components/LoginForm'
 
 export default class App extends Component<Props> {
   componentWillMount() {
