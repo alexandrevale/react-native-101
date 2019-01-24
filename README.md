@@ -58,3 +58,42 @@ Redux:
 	* Reducer: a function that returns some data
 	* State: data for our app to use
 
+
+## Manager
+
+Projeto com objetivo de utilizar a navegação entre telas, autenticação via Firebase
+
+### Anotações:
+
+**Key interpolation**
+
+```
+const newState = {};
+newState[action.payload.prop] = action.payload.value
+
+```
+
+No ES6
+```
+return { ...state, [action.payload.prop]: action.payload.value }
+```
+
+**Components**
+
+* [Picker](https://facebook.github.io/react-native/docs/picker)
+
+**Database**
+
+```
+{
+  "rules": {
+		"users": {
+      "$uid": {
+        ".read": "$uid === auth.uid",
+        ".write": "$uid === auth.uid
+      }
+    }
+  }
+}
+```
+
