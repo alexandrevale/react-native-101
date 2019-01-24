@@ -6,6 +6,7 @@ const INITIAL_STATE = {
 	name: '',
 	phone: '',
 	shift: ''
+	// shift: 'Segunda'
 };
 
 export default (state = INITIAL_STATE, action) => {
