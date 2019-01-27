@@ -5,6 +5,8 @@ Repositório dedicado aos estudos de React Native.
 Lista de apps:
 * Albums
 * Auth
+* Tech Stack
+* Manager
 * InstaluraMobile
 
 
@@ -97,3 +99,7 @@ return { ...state, [action.payload.prop]: action.payload.value }
 }
 ```
 
+## Referências
+
+* [NPM JS](https://www.npmjs.com/)
+* [React Native Communications](https://www.npmjs.com/package/react-native-communications)
