@@ -4,9 +4,11 @@ import { connect } from 'react-redux';
 import Communications from 'react-native-communications';
 import EmployeeForm from './EmployeeForm';
 import { employeeUpdate, employeeSave } from '../actions';
-import { Card, CardSection, Button } from './common';
+import { Card, CardSection, Button, Confirm } from './common';
 
 class EmployeeEdit extends Component {
+	state = { showModal: false };
+
 	componentWillMount() {
 		_.each(this.props.employee, (value, prop) => {
 			this.props.employeeUpdate({ prop, value });
@@ -41,6 +43,18 @@ class EmployeeEdit extends Component {
 						Enviar Mensagem
 					</Button>
 				</CardSection>
+
+				<CardSection>
+					<Button onPress={() => this.setState({ showModal: !this.state.showModal })}>
+						Deletar Cadastro
+					</Button>
+				</CardSection>
+
+				<Confirm
+					visible={this.state.showModal}
+				>
+					Você tem certeza que deseja deletar este cadastro?
+				</Confirm>
 			</Card>
 		)
 	}

@@ -83,6 +83,7 @@ return { ...state, [action.payload.prop]: action.payload.value }
 **Components**
 
 * [Picker](https://facebook.github.io/react-native/docs/picker)
+* [Modal](https://facebook.github.io/react-native/docs/modal)
 
 **Database**
 
