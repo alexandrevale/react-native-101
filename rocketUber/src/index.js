@@ -1,11 +1,6 @@
 import React from 'react';
-import MapView from 'react-native-maps';
-import { View } from 'react-native';
+import Map from './components/Maps'
 
-export default class App extends Component {
-  render() {
-    return (
+const App = () => <Map />
 
-    );
-  }
-}
+export default App;
