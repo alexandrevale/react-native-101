@@ -7,6 +7,7 @@ Lista de apps:
 * Auth
 * Tech Stack
 * Manager
+* Rocket Uber
 * InstaluraMobile
 
 
@@ -100,7 +101,12 @@ return { ...state, [action.payload.prop]: action.payload.value }
 }
 ```
 
+## Rocket Uber
+
+Projeto de estudo desenvolvido com base no [vídeo](https://youtu.be/bg-U0xZwcRk).
+
 ## Referências
 
 * [NPM JS](https://www.npmjs.com/)
 * [React Native Communications](https://www.npmjs.com/package/react-native-communications)
+* [React Native Maps](https://github.com/react-native-community/react-native-maps)
