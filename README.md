@@ -111,3 +111,4 @@ Projeto de estudo desenvolvido com base no [vídeo](https://youtu.be/bg-U0xZwcRk
 * [React Native Communications](https://www.npmjs.com/package/react-native-communications)
 * [React Native Maps](https://github.com/react-native-community/react-native-maps)
 * [React Native Google Places Autocomplete](https://github.com/FaridSafi/react-native-google-places-autocomplete)
+* [React Native Maps Directions](https://github.com/bramus/react-native-maps-directions)
