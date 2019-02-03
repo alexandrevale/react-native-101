@@ -53,12 +53,15 @@ export default class Map extends Component {
           region={ region }
           showsUserLocation
           loadingEnabled
+          ref={ e => this.mapView = e }
         >
           {destination && (
             <Directions
               origin={ region }
               destination={destination}
-              onReady={() => {}}
+              onReady={ result => {
+                this.mapView.fitToCoordinates(result.coodinates);
+              }}
           )}
         </ MapView>
 
