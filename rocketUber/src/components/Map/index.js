@@ -4,7 +4,7 @@ import Geocoder from 'react-native-geocoding';
 import Search from '../Search';
 import Diretions from '../Diretions';
 import Details from '../Details';
-import { View } from 'react-native';
+import { View, Image } from 'react-native';
 import { getPixelSize } from '../../utils';
 import markerImage from '../../assets/marker.png';
 import backImage from '../../assets/backImage.png';
@@ -66,6 +66,10 @@ export default class Map extends Component {
         title: data.structured_formatting.main_text,
       }
     })
+  }
+
+  handleBack= () => {
+    this.setState({ destination: null });
   }
 
   render() {
