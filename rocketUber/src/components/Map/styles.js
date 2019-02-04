@@ -28,3 +28,21 @@ export const LocationText = styled.Text`
   font-size: 14px;
   color: #333;
 `;
+
+export const LocationTimeText = styled.Text`
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+`;
+
+export const LocationTimeTextSmall = styled.Text`
+  color: #fff;
+  font-size: 10px;
+  text-align: center;
+`;
+
+export const Back = styled.TouchableOpacity`
+  position: absolute;
+  top: ${Platform.select({ ios: 60, android: 40 })};
+  left: 20px;
+`;

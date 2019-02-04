@@ -5,7 +5,13 @@ import Diretions from '../Diretions';
 import { View } from 'react-native';
 import { getPixelSize } from '../../utils';
 import markerImage from '../../assets/marker.png';
-import { LocationBox, LocationText } from './styles';
+import { 
+  LocationBox,
+  LocationText,
+  LocationTimeBox,
+  LocationTimeText,
+  LocationTimeTextSmall
+} from './styles';
  
 export default class Map extends Component {
   state = {
@@ -83,6 +89,20 @@ export default class Map extends Component {
                 <LocationBox>
                   <LocationText>
                     {destination.title}
+                  </LocationText>
+                </LocationBox>
+              </Marker>
+
+              <Marker 
+                coordinate={region} 
+                anchor={{ x: 0, y: 0 }} 
+              >
+                <LocationBox>
+                  <LocationTimeBox>
+                    <LocationTimeText>31</LocationTimeText>
+                    <LocationTimeTextSmall>Min</LocationTimeTextSmall>Min                 </LocationTimeBox>
+                  <LocationText>
+                    Rua Lorem Ipsum
                   </LocationText>
                 </LocationBox>
               </Marker>
