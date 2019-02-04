@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
-import MapView from 'react-native-maps';
+import React, { Component, Fragment } from 'react';
+import MapView, { Marker } from 'react-native-maps';
 import Search from '../Search';
 import Diretions from '../Diretions';
 import { View } from 'react-native';
 import { getPixelSize } from '../../utils';
+import markerImage from '../../assets/marker.png';
 
 export default class Map extends Component {
   state = {
@@ -57,20 +58,28 @@ export default class Map extends Component {
           ref={ e => this.mapView = e }
         >
           {destination && (
-            <Directions
-              origin={ region }
-              destination={destination}
-              onReady={ result => {
-                this.mapView.fitToCoordinates(result.coodinates, {
-                  // ios
-                  edgePadding: {
-                    top: getPixelSize(50),
-                    right: getPixelSize(50),
-                    bottom: getPixelSize(50),
-                    left: getPixelSize(50)
-                  }
-                });
-              }}
+            <Fragment>
+              <Directions
+                origin={ region }
+                destination={destination}
+                onReady={ result => {
+                  this.mapView.fitToCoordinates(result.coodinates, {
+                    // ios
+                    edgePadding: {
+                      top: getPixelSize(50),
+                      right: getPixelSize(50),
+                      bottom: getPixelSize(50),
+                      left: getPixelSize(50)
+                    }
+                  });
+                }}
+              />
+              <Marker 
+                coordinate={destination} 
+                anchor={{ x: 0, y: 0 }} 
+                image={markerImage} 
+              />
+            </Fragment>
           )}
         </ MapView>
 
