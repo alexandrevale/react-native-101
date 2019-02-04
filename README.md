@@ -113,3 +113,4 @@ Projeto de estudo desenvolvido com base no [vídeo](https://youtu.be/bg-U0xZwcRk
 * [React Native Google Places Autocomplete](https://github.com/FaridSafi/react-native-google-places-autocomplete)
 * [React Native Maps Directions](https://github.com/bramus/react-native-maps-directions)
 * [Styled Components](https://www.styled-components.com/)
+* [React Native Geocoding](https://github.com/marlove/react-native-geocoding)
