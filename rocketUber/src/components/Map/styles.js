@@ -46,3 +46,9 @@ export const Back = styled.TouchableOpacity`
   top: ${Platform.select({ ios: 60, android: 40 })};
   left: 20px;
 `;
+
+export const Back = styled.TouchableOpacity`
+  position: absolute;
+  top: ${Platform.select({ ios: 60, android: 40 })};
+  left: 20px;
+`;

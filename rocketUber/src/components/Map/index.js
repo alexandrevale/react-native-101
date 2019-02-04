@@ -3,15 +3,18 @@ import MapView, { Marker } from 'react-native-maps';
 import Geocoder from 'react-native-geocoding';
 import Search from '../Search';
 import Diretions from '../Diretions';
+import Details from '../Details';
 import { View } from 'react-native';
 import { getPixelSize } from '../../utils';
 import markerImage from '../../assets/marker.png';
+import backImage from '../../assets/backImage.png';
 import { 
   LocationBox,
   LocationText,
   LocationTimeBox,
   LocationTimeText,
-  LocationTimeTextSmall
+  LocationTimeTextSmall,
+  Back
 } from './styles';
 
 Geocoder.init(''); // Chave da API
@@ -91,7 +94,7 @@ export default class Map extends Component {
                     edgePadding: {
                       top: getPixelSize(50),
                       right: getPixelSize(50),
-                      bottom: getPixelSize(50),
+                      bottom: getPixelSize(350),
                       left: getPixelSize(50)
                     }
                   });
@@ -131,9 +134,19 @@ export default class Map extends Component {
             </Fragment>
           )}
         </ MapView>
-
-        <Search onLocationSelected={this.handleLocationSelected} />
+        
+        {destination ? (
+          <Fragment>
+            <Back onPress={this.handleBack}>
+              <Image source={backImage} />
+            </Back>
+            <Details />
+          </Fragment>
+        ) : (
+          <Search onLocationSelected={this.handleLocationSelected} />
+        )}
+        
       </View>
-    )
+    );
   }
 }
